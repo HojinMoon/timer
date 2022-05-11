@@ -1,0 +1,24 @@
+.Timer {
+  text-align: center;
+}
+
+.num {
+  font-size: 10vw;
+}
+
+.btn {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.add {
+  width: 5vw;
+  height: 5vw;
+  border-radius: 10%;
+}
+
+.sub {
+  width: 5vw;
+  height: 5vw;
+  border-radius: 10%;
+}
