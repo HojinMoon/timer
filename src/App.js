@@ -1,11 +1,12 @@
-import Timer from "./Timer"
 import "./App.css"
+import { Link } from "react-router-dom"
 
 function App() {
   return (
-    <div className="App">
-      <Timer />
-    </div>
+    <>
+      <h1>1</h1>
+      <Link to="/timer">Timer</Link>
+    </>
   )
 }
 

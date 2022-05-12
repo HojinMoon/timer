@@ -1,8 +1,14 @@
+* {
+  background-color: #b0bbbf;
+}
+
 .Timer {
   text-align: center;
+  margin-top: 3vh;
 }
 
 .num {
+  color: #2e4052;
   font-size: 10vw;
 }
 
