@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 function App() {
   return (
     <>
-      <Link to="/timer">Timer</Link>
+      <Link to="/clock-timer">Timer</Link>
       <hr />
       <Link to="/alarm">Alarm</Link>
     </>

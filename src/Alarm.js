@@ -9,6 +9,9 @@ const Alarm = () => {
     timerRef.current = setInterval(() => {
       setSec((sec) => sec - 1)
     }, 1000)
+    if (setSec(0)) {
+      Stop()
+    }
   }
   const Stop = () => {
     clearInterval(timerRef.current)
@@ -23,7 +26,6 @@ const Alarm = () => {
     setSec(59)
   } else if (min === 0 && sec <= 0) {
     Stop()
-    alert("1Min Finish!")
   }
 
   //Plus & Minus Btn

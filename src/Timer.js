@@ -9,6 +9,9 @@ const Timer = () => {
     timerRef.current = setInterval(() => {
       setSec((sec) => sec - 1)
     }, 1000)
+    if (setSec(0)) {
+      Stop()
+    }
   }
   const Stop = () => {
     clearInterval(timerRef.current)
@@ -21,7 +24,7 @@ const Timer = () => {
   if (sec < 0 && min > 0) {
     setMin(min - 1)
     setSec(59)
-  } else if (sec === 0) {
+  } else if (min === 0 && sec <= 0) {
     Stop()
   }
 
@@ -62,13 +65,13 @@ const Timer = () => {
             -
           </button>
         </div>
-        <button className="add" onClick={Play}>
+        <button className="button" onClick={Play}>
           Play
         </button>
-        <button className="add" onClick={Clear}>
+        <button className="button" onClick={Clear}>
           Clear
         </button>
-        <button className="add" onClick={Stop}>
+        <button className="button" onClick={Stop}>
           Stop
         </button>
         <div className="sec">

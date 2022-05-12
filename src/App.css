@@ -17,14 +17,24 @@
   justify-content: space-evenly;
 }
 
+.button {
+  display: flex;
+  justify-content: space-evenly;
+  width: 4vw;
+  height: 4vw;
+  border-radius: 60%;
+  margin: 0 auto;
+  padding-top: 1vw;
+}
+
 .add {
   width: 5vw;
-  height: 5vw;
-  border-radius: 10%;
+  height: 4vw;
+  border-radius: 50% 0% 0% 50%;
 }
 
 .sub {
   width: 5vw;
-  height: 5vw;
-  border-radius: 10%;
+  height: 4vw;
+  border-radius: 0% 50% 50% 0%;
 }
