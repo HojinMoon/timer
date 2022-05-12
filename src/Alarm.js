@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react"
 
-const Timer = () => {
-  const [min, setMin] = useState(0)
+const Alarm = () => {
+  const [min, setMin] = useState(1)
   const [sec, setSec] = useState(0)
   const timerRef = useRef()
   // Play And Stop Btn
@@ -21,8 +21,9 @@ const Timer = () => {
   if (sec < 0 && min > 0) {
     setMin(min - 1)
     setSec(59)
-  } else if (sec === 0) {
+  } else if (min === 0 && sec <= 0) {
     Stop()
+    alert("1Min Finish!")
   }
 
   //Plus & Minus Btn
@@ -47,7 +48,7 @@ const Timer = () => {
 
   return (
     <div className="Timer">
-      <h1>TIMER</h1>
+      <h1>Alarm</h1>
       <span className="num">
         {min < 10 ? `0${min}` : min} : {sec < 10 ? `0${sec}` : sec}
       </span>{" "}
@@ -85,4 +86,4 @@ const Timer = () => {
   )
 }
 
-export default Timer
+export default Alarm
